@@ -1,0 +1,24 @@
+<h3>
+    Productos Agregados</h3>
+<table *ngIf="data.products.length > 0">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Descripción</th>
+            <th>Precio de Compra</th>
+            <th>Precio de Venta</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of data.products; let i = index">
+            <td>{{ product.code }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.purchasePrice }}</td>
+            <td>{{ product.sellingPrice }}</td>
+            <td>
+                <button (click)="data.deleteProduct(i)">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

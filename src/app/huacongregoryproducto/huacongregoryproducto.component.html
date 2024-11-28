@@ -1,0 +1,25 @@
+<div class="product-container">
+    <h2>Agregar Producto</h2>
+    <form (ngSubmit)="addProduct()">
+        <div>
+            <label for="code">Código:</label>
+            <input type="text" id="code" [(ngModel)]="code" name="code" required>
+        </div>
+        <div>
+            <label for="description">Descripción:</label>
+            <input type="text" id="description" [(ngModel)]="description" name="description" required>
+        </div>
+        <div>
+            <label for="purchasePrice">Precio de Compra:</label>
+            <input type="number" id="purchasePrice" [(ngModel)]="purchasePrice" name="purchasePrice" required>
+        </div>
+        <div>
+            <label for="sellingPrice">Precio de Venta:</label>
+            <input type="number" id="sellingPrice" [(ngModel)]="sellingPrice" name="sellingPrice" required>
+        </div>
+        <button type="submit">Aceptar</button>
+        <button type="button" (click)="consult()">Consultar</button>
+        <button type="button" (click)="close()">Cerrar</button>
+    </form>
+    <p *ngIf="message">{{ message }}</p>
+</div>

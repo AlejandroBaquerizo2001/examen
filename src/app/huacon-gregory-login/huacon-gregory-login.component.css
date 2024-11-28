@@ -1,0 +1,17 @@
+/* login.component.css */
+
+.login-container {
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+div {
+    margin-bottom: 15px;
+}
